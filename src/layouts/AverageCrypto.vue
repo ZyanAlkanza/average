@@ -1,6 +1,6 @@
 <template>
-    <div class="row" style="height: 100vh; overflow: hidden;">
-      <div class="col-2 q-pa-md">
+    <div class="row" style="height: 100dvh; overflow: hidden;">
+      <div class="col-2 q-pa-md" v-show="menu">
         <div class="sidebar bg-primary" style="height: 100%; border-radius: 16px; padding: 32px 16px;">
           <div class="logo flex justify-center" style="width: 100%;">
             <img src="../assets/logo.png" alt="Average Logo" style="width: 70%;">
@@ -13,10 +13,15 @@
           </div>
         </div>
       </div>
-      <div class="col-10 q-pa-md">
+      <div class="q-pa-md" :class="menu ? 'col-10' : 'col-12'">
         <div class="col-2 q-py-sm" style="height: 100%; border-radius: 16px;">
-          <div class="content-title" style="font-size: 20px;">
-            Hitung Harga Beli Rata-Rata
+          <div class="content-title row justify-between" style="font-size: 20px;">
+            <div>
+              Hitung Harga Beli Rata-Rata
+            </div>
+            <div>
+              <q-btn outline icon="menu" text-color="primary" @click="menu = !menu"/>
+            </div>
           </div>
           <div class="content row justify-between">
             <div class="transaction col-6 q-py-md">
@@ -112,6 +117,7 @@
 export default {
   data() {
     return {
+      menu: false,
       koin1:'',
       koin2:'',
       koin3:'',
