@@ -64,16 +64,21 @@
       <q-page v-show="activeMenu == 'Average Coin'">
         <AverageCrypto />
       </q-page>
+      <q-page v-show="activeMenu == 'Average Stock'">
+        <AverageStock />
+      </q-page>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
 import AverageCrypto from './AverageCrypto.vue';
+import AverageStock from './AverageStock.vue';
 
 export default {
   components: {
-    AverageCrypto
+    AverageCrypto,
+    AverageStock
   },
   data() {
     return {
@@ -93,44 +98,10 @@ export default {
           'icon': 'paid'
         },
       ],
-      // koin1:'',
-      // koin2:'',
-      // koin3:'',
-      // koin4:'',
-      // koin5:'',
-      // harga1:'',
-      // harga2:'',
-      // harga3:'',
-      // harga4:'',
-      // harga5:'',
-      // transaksi3: false,
-      // transaksi4: false,
-      // transaksi5: false,
-      // average: 0
     }
   },
   methods: {
-    // hitung() {
-    //   const harga1 = this.harga1.replace(/\s+/g,'');
-    //   const harga2 = this.harga2.replace(/\s+/g,'');
-    //   const harga3 = this.harga3.replace(/\s+/g,'');
-    //   const harga4 = this.harga4.replace(/\s+/g,'');
-    //   const harga5 = this.harga5.replace(/\s+/g,'');
-
-    //   const transaksi1 = (parseFloat(this.koin1) || 0) * (parseFloat(harga1) || 0);
-    //   const transaksi2 = (parseFloat(this.koin2) || 0) * (parseFloat(harga2) || 0);
-    //   const transaksi3 = (this.koin3 && this.harga3) ? (parseFloat(this.koin3) || 0) * (parseFloat(harga3) || 0) : 0;
-    //   const transaksi4 = (this.koin4 && this.harga4) ? (parseFloat(this.koin4) || 0) * (parseFloat(harga4) || 0) : 0;
-    //   const transaksi5 = (this.koin5 && this.harga5) ? (parseFloat(this.koin5) || 0) * (parseFloat(harga5) || 0) : 0;
-
-    //   const totalKoin = (parseFloat(this.koin1) || 0) + (parseFloat(this.koin2) || 0) + (parseFloat(this.koin3) || 0) + (parseFloat(this.koin4) || 0) + (parseFloat(this.koin5) || 0);
-    //   const total = (transaksi1 + transaksi2 + transaksi3 + transaksi4 + transaksi5) / (totalKoin || 1);
-      
-    //   const konversiInteger = Math.floor(total);
-    //   const konversiRupiah = konversiInteger.toLocaleString('id-ID');
-
-    //   this.average = konversiRupiah;
-    // }
+    
   },
 }
 </script>
