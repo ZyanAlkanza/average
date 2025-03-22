@@ -8,7 +8,7 @@ const routes = [
   // },
   {
     path: '/',
-    component: () => import('layouts/AverageCrypto.vue')
+    component: () => import('src/layouts/Home.vue')
   },
 
   // Always leave this as last one,

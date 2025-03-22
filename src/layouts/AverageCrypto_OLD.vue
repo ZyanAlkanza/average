@@ -1,29 +1,50 @@
 <template>
-    <div class="row" style="overflow: hidden;">
-      <div class="q-px-md col-12">
-        <div class="col-2" style="height: 100%; border-radius: 16px;">
+    <div class="row" style="height: 100dvh; overflow: hidden;">
+      <div class="col-2 q-pa-md" v-show="menu">
+        <div class="sidebar bg-primary" style="height: 100%; border-radius: 16px; padding: 32px 16px;">
+          <div class="logo flex justify-center" style="width: 100%;">
+            <img src="../assets/logo.png" alt="Average Logo" style="width: 70%;">
+          </div>
+          <div class="menu" style="margin-top: 56px;">
+            <div class="bg-white q-pa-sm" style="border-radius: 8px;">
+              <i class="ri-btc-line ri-lg"></i>
+              Harga Rata-Rata
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="q-pa-md" :class="menu ? 'col-10' : 'col-12'">
+        <div class="col-2 q-py-sm" style="height: 100%; border-radius: 16px;">
+          <div class="content-title row justify-between" style="font-size: 20px;">
+            <div>
+              Hitung Harga Beli Rata-Rata
+            </div>
+            <div>
+              <q-btn outline icon="menu" text-color="primary" @click="menu = !menu"/>
+            </div>
+          </div>
           <div class="content row justify-between">
-            <div class="transaction col-md-6 col-xs-12 q-py-md">
+            <div class="transaction col-6 q-py-md">
               <div class="card-1 q-pa-md bg-grey-2" style="border-radius: 4px;">
-                Transaction 1
+                Transaksi 1
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled v-model="koin1" label="Total Coin" class="col-6"  mask="#.########"/>
-                  <q-input dense square filled v-model="harga1" label="Price Per Coin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
+                  <q-input dense square filled v-model="koin1" label="Jumlah Koin" class="col-6"  mask="#.########"/>
+                  <q-input dense square filled v-model="harga1" label="Harga Per 1 Koin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
                 </div>
               </div>
 
               <div class="card-2 q-pa-md q-mt-md bg-grey-2" style="border-radius: 4px;">
-                Transaction 2
+                Transaksi 2
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled v-model="koin2" label="Total Coin" class="col-6" mask="#.########"/>
-                  <q-input dense square filled v-model="harga2" label="Price Per Coin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
+                  <q-input dense square filled v-model="koin2" label="Jumlah Koin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled v-model="harga2" label="Harga Per 1 Koin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
                 </div>
               </div>
 
               <div class="card-3 q-pa-md q-mt-md bg-grey-2" style="border-radius: 4px;">
                 <div class="flex justify-between">
                   <div class="flex justify-center items-center">
-                    Transaction 3
+                    Transaksi 3
                   </div>
                   <q-toggle
                     v-model="transaksi3"
@@ -32,15 +53,15 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi3 == false" v-model="koin3" label="Total Coin" class="col-6" mask="#.########"/>
-                  <q-input dense square filled :disable="transaksi3 == false" v-model="harga3" label="Price Per Coin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
+                  <q-input dense square filled :disable="transaksi3 == false" v-model="koin3" label="Jumlah Koin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi3 == false" v-model="harga3" label="Harga Per 1 Koin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
                 </div>
               </div>
 
               <div class="card-4 q-pa-md q-mt-md bg-grey-2" style="border-radius: 4px;">
                 <div class="flex justify-between">
                   <div class="flex justify-center items-center">
-                    Transaction 4
+                    Transaksi 4
                   </div>
                   <q-toggle
                     v-model="transaksi4"
@@ -49,15 +70,15 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi4 == false" v-model="koin4" label="Total Coin" class="col-6" mask="#.########"/>
-                  <q-input dense square filled :disable="transaksi4 == false" v-model="harga4" label="Price Per Coin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
+                  <q-input dense square filled :disable="transaksi4 == false" v-model="koin4" label="Jumlah Koin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi4 == false" v-model="harga4" label="Harga Per 1 Koin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
                 </div>
               </div>
 
               <div class="card-5 q-pa-md q-mt-md bg-grey-2" style="border-radius: 4px;">
                 <div class="flex justify-between">
                   <div class="flex justify-center items-center">
-                    Transaction 5
+                    Transaksi 5
                   </div>
                   <q-toggle
                     v-model="transaksi5"
@@ -66,20 +87,20 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi5 == false" v-model="koin5" label="Total Coin" class="col-6" mask="#.########"/>
-                  <q-input dense square filled :disable="transaksi5 == false" v-model="harga5" label="Price Per Coin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
+                  <q-input dense square filled :disable="transaksi5 == false" v-model="koin5" label="Jumlah Koin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi5 == false" v-model="harga5" label="Harga Per 1 Koin" class="col-6" prefix="Rp." mask="# ### ### ###"/>
                 </div>
               </div>
 
               <div class="row q-mt-sm q-gutter-sm">
-                <q-btn outline disabled  color="primary" label="Add Transaction" icon="add"/>
-                <q-btn @click="hitung" class="col-grow" color="primary" label="Count The Average" icon="calculate"/>
+                <q-btn outline disabled  color="primary" label="Tambah Transaksi" icon="add"/>
+                <q-btn @click="hitung" class="col-grow" color="primary" label="Hitung Harga Rata-Rata" icon="calculate"/>
               </div>
             </div>
-            <div class="result col-md-6 col-xs-12 q-px-md q-pt-md">
+            <div class="result col-6 q-px-md q-pt-md">
               <div class="bg-grey-2" style="height: 30%; border-radius: 8px;">
                 <div class="title flex justify-center items-end" style="height: 30%;">
-                  Your Average Coin Price:
+                  Harga Rata-Rata Crypto-mu adalah:
                 </div>
                 <div class="title flex justify-center q-pt-lg text-primary" style="height: 70%; font-size: 32px; font-weight: bold;">
                   Rp. {{ average  }}
