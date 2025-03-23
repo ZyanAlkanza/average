@@ -67,6 +67,9 @@
       <q-page v-show="activeMenu == 'Average Stock'">
         <AverageStock />
       </q-page>
+      <q-page v-show="activeMenu == 'Average US Stock'">
+        <AverageUSStock />
+      </q-page>
     </q-page-container>
   </q-layout>
 </template>
@@ -74,11 +77,13 @@
 <script>
 import AverageCrypto from './AverageCrypto.vue';
 import AverageStock from './AverageStock.vue';
+import AverageUSStock from './AverageUSStock.vue';
 
 export default {
   components: {
     AverageCrypto,
-    AverageStock
+    AverageStock,
+    AverageUSStock
   },
   data() {
     return {
