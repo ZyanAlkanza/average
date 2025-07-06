@@ -4,6 +4,15 @@
       <q-toolbar class="justify-between">
         <span class="text-primary" style="font-size: 16px; font-weight: 500;">
           {{ activeMenu }}
+          
+          <q-btn
+            class="text-grey-6"
+            dense
+            flat
+            icon="error_outline"
+            size="sm"
+            @click="information"
+          />
         </span>
         <q-btn 
           icon="widgets" 
@@ -71,6 +80,26 @@
         <AverageUSStock />
       </q-page>
     </q-page-container>
+
+    <q-dialog v-model="averageCoinDialog">
+      <q-card>
+        <q-card-section>
+          <div class="text-h6">Information</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          <q-img
+            src="../assets/img/averageCoin.gif"
+            style="width: 400px;"
+            fit="fill"
+          />
+        </q-card-section>
+
+        <q-card-actions align="right">
+          <q-btn flat label="OK" color="primary" v-close-popup />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
   </q-layout>
 </template>
 
@@ -87,6 +116,9 @@ export default {
   },
   data() {
     return {
+      averageStockDialog: false,
+      averageUSStockDialog: false,
+      averageCoinDialog: false,
       menu: false,
       activeMenu:'Average Coin',
       menuList: [
@@ -106,7 +138,11 @@ export default {
     }
   },
   methods: {
-    
+    information() {
+      if(this.activeMenu == 'Average Coin'){
+        this.averageCoinDialog = true;
+      }
+    }
   },
 }
 </script>
