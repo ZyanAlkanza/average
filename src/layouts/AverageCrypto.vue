@@ -7,7 +7,7 @@
               <div class="card-1 q-pa-md bg-grey-2" style="border-radius: 4px;">
                 Transaction 1
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled v-model="koin1" label="Total Coin" class="col-6"  mask="#.########"/>
+                  <q-input dense square filled v-model="koin1" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled v-model="harga1" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
@@ -15,7 +15,7 @@
               <div class="card-2 q-pa-md q-mt-md bg-grey-2" style="border-radius: 4px;">
                 Transaction 2
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled v-model="koin2" label="Total Coin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled v-model="koin2" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled v-model="harga2" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
@@ -32,7 +32,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi3 == false" v-model="koin3" label="Total Coin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi3 == false" v-model="koin3" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi3 == false" v-model="harga3" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
@@ -49,7 +49,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi4 == false" v-model="koin4" label="Total Coin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi4 == false" v-model="koin4" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi4 == false" v-model="harga4" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
@@ -66,7 +66,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi5 == false" v-model="koin5" label="Total Coin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi5 == false" v-model="koin5" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi5 == false" v-model="harga5" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
@@ -85,7 +85,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi6 == false" v-model="koin6" label="Total Coin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi6 == false" v-model="koin6" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi6 == false" v-model="harga6" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
@@ -102,7 +102,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi7 == false" v-model="koin7" label="Total Coin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi7 == false" v-model="koin7" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi7 == false" v-model="harga7" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
@@ -119,7 +119,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi8 == false" v-model="koin8" label="Total Coin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi8 == false" v-model="koin8" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi8 == false" v-model="harga8" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
@@ -136,7 +136,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi9 == false" v-model="koin9" label="Total Coin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi9 == false" v-model="koin9" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi9 == false" v-model="harga9" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
@@ -153,7 +153,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi10 == false" v-model="koin10" label="Total Coin" class="col-6" mask="#.########"/>
+                  <q-input dense square filled :disable="transaksi10 == false" v-model="koin10" label="Total Coin" class="col-6"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi10 == false" v-model="harga10" label="Price Per Coin" class="col-6" prefix="Rp." mask="#.###.###.###" reverse-fill-mask maxlength="13"/>
                 </div>
               </div>
