@@ -7,7 +7,7 @@
               <div class="card-1 q-pa-md bg-grey-2" style="border-radius: 4px;">
                 Transaction 1
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled v-model="lot1" label="Total Lot" class="col-6"  mask="#####"/>
+                  <q-input dense square filled v-model="lot1" label="Total Shares" class="col-6"  mask="#####"/>
                   <q-input dense square input-class="text-right" filled v-model="harga1" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -15,7 +15,7 @@
               <div class="card-2 q-pa-md q-mt-md bg-grey-2" style="border-radius: 4px;">
                 Transaction 2
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled v-model="lot2" label="Total Lot" class="col-6" mask="#####"/>
+                  <q-input dense square filled v-model="lot2" label="Total Shares" class="col-6" mask="#####"/>
                   <q-input dense square input-class="text-right" filled v-model="harga2" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -32,7 +32,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi3 == false" v-model="lot3" label="Total Lot" class="col-6" mask="#####"/>
+                  <q-input dense square filled :disable="transaksi3 == false" v-model="lot3" label="Total Shares" class="col-6" mask="#####"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi3 == false" v-model="harga3" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -49,7 +49,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi4 == false" v-model="lot4" label="Total Lot" class="col-6" mask="#####"/>
+                  <q-input dense square filled :disable="transaksi4 == false" v-model="lot4" label="Total Shares" class="col-6" mask="#####"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi4 == false" v-model="harga4" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -66,7 +66,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi5 == false" v-model="lot5" label="Total Lot" class="col-6" mask="#####"/>
+                  <q-input dense square filled :disable="transaksi5 == false" v-model="lot5" label="Total Shares" class="col-6" mask="#####"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi5 == false" v-model="harga5" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -85,7 +85,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi6 == false" v-model="lot6" label="Total Lot" class="col-6" mask="#####"/>
+                  <q-input dense square filled :disable="transaksi6 == false" v-model="lot6" label="Total Shares" class="col-6" mask="#####"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi6 == false" v-model="harga6" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -102,7 +102,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi7 == false" v-model="lot7" label="Total Lot" class="col-6" mask="#####"/>
+                  <q-input dense square filled :disable="transaksi7 == false" v-model="lot7" label="Total Shares" class="col-6" mask="#####"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi7 == false" v-model="harga7" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -119,7 +119,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi8 == false" v-model="lot8" label="Total Lot" class="col-6" mask="#####"/>
+                  <q-input dense square filled :disable="transaksi8 == false" v-model="lot8" label="Total Shares" class="col-6" mask="#####"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi8 == false" v-model="harga8" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -136,7 +136,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi9 == false" v-model="lot9" label="Total Lot" class="col-6" mask="#####"/>
+                  <q-input dense square filled :disable="transaksi9 == false" v-model="lot9" label="Total Shares" class="col-6" mask="#####"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi9 == false" v-model="harga9" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -153,7 +153,7 @@
                   />
                 </div>
                 <div class="row q-col-gutter-x-sm q-mt-md">
-                  <q-input dense square filled :disable="transaksi10 == false" v-model="lot10" label="Total Lot" class="col-6" mask="#####"/>
+                  <q-input dense square filled :disable="transaksi10 == false" v-model="lot10" label="Total Shares" class="col-6" mask="#####"/>
                   <q-input dense square input-class="text-right" filled :disable="transaksi10 == false" v-model="harga10" label="Buy Price" class="col-6" prefix="Rp." mask="#.###.###" reverse-fill-mask/>
                 </div>
               </div>
@@ -179,6 +179,22 @@
           </div>
         </div>
       </div>
+
+      <q-dialog v-model="information_dialog">
+        <q-card>
+          <q-card-section>
+            <div class="text-h6">Information</div>
+          </q-card-section>
+
+          <q-card-section class="q-pt-none">
+          
+          </q-card-section>
+
+          <q-card-actions align="right">
+            <q-btn flat label="OK" color="primary" v-close-popup />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
     </div>
 </template>
 
@@ -186,6 +202,7 @@
 export default {
   data() {
     return {
+      information_dialog: false,
       menu: false,
       lot1:'',
       lot2:'',
@@ -233,16 +250,27 @@ export default {
       const harga9 = this.harga9.replace('.','');
       const harga10 = this.harga10.replace('.','');
 
-      const transaksi1 = (parseInt(this.lot1) || 0) * (parseInt(harga1) || 0);
-      const transaksi2 = (parseInt(this.lot2) || 0) * (parseInt(harga2) || 0);
-      const transaksi3 = (this.lot3 && this.harga3) ? (parseInt(this.lot3) || 0) * (parseInt(harga3) || 0) : 0;
-      const transaksi4 = (this.lot4 && this.harga4) ? (parseInt(this.lot4) || 0) * (parseInt(harga4) || 0) : 0;
-      const transaksi5 = (this.lot5 && this.harga5) ? (parseInt(this.lot5) || 0) * (parseInt(harga5) || 0) : 0;
-      const transaksi6 = (this.lot6 && this.harga6) ? (parseInt(this.lot6) || 0) * (parseInt(harga6) || 0) : 0;
-      const transaksi7 = (this.lot7 && this.harga7) ? (parseInt(this.lot7) || 0) * (parseInt(harga7) || 0) : 0;
-      const transaksi8 = (this.lot8 && this.harga8) ? (parseInt(this.lot8) || 0) * (parseInt(harga8) || 0) : 0;
-      const transaksi9 = (this.lot9 && this.harga9) ? (parseInt(this.lot9) || 0) * (parseInt(harga9) || 0) : 0;
-      const transaksi10 = (this.lot10 && this.harga10) ? (parseInt(this.lot10) || 0) * (parseInt(harga10) || 0) : 0;
+      // const transaksi1 = (parseInt(this.lot1) || 0) * (parseInt(harga1) || 0);
+      // const transaksi2 = (parseInt(this.lot2) || 0) * (parseInt(harga2) || 0);
+      // const transaksi3 = (this.lot3 && this.harga3) ? (parseInt(this.lot3) || 0) * (parseInt(harga3) || 0) : 0;
+      // const transaksi4 = (this.lot4 && this.harga4) ? (parseInt(this.lot4) || 0) * (parseInt(harga4) || 0) : 0;
+      // const transaksi5 = (this.lot5 && this.harga5) ? (parseInt(this.lot5) || 0) * (parseInt(harga5) || 0) : 0;
+      // const transaksi6 = (this.lot6 && this.harga6) ? (parseInt(this.lot6) || 0) * (parseInt(harga6) || 0) : 0;
+      // const transaksi7 = (this.lot7 && this.harga7) ? (parseInt(this.lot7) || 0) * (parseInt(harga7) || 0) : 0;
+      // const transaksi8 = (this.lot8 && this.harga8) ? (parseInt(this.lot8) || 0) * (parseInt(harga8) || 0) : 0;
+      // const transaksi9 = (this.lot9 && this.harga9) ? (parseInt(this.lot9) || 0) * (parseInt(harga9) || 0) : 0;
+      // const transaksi10 = (this.lot10 && this.harga10) ? (parseInt(this.lot10) || 0) * (parseInt(harga10) || 0) : 0;
+
+      const transaksi1 = parseInt(harga1) || 0;
+      const transaksi2 = parseInt(harga2) || 0;
+      const transaksi3 = this.harga3 ? parseInt(harga3) || 0 : 0;
+      const transaksi4 = this.harga4 ? parseInt(harga4) || 0 : 0;
+      const transaksi5 = this.harga5 ? parseInt(harga5) || 0 : 0;
+      const transaksi6 = this.harga6 ? parseInt(harga6) || 0 : 0;
+      const transaksi7 = this.harga7 ? parseInt(harga7) || 0 : 0;
+      const transaksi8 = this.harga8 ? parseInt(harga8) || 0 : 0;
+      const transaksi9 = this.harga9 ? parseInt(harga9) || 0 : 0;
+      const transaksi10 = this.harga10 ? parseInt(harga10) || 0 : 0;
 
       const totalLot = 
       (parseInt(this.lot1) || 0) + 
@@ -255,14 +283,17 @@ export default {
       (parseInt(this.lot8) || 0) +
       (parseInt(this.lot9) || 0) +
       (parseInt(this.lot10) || 0);
+      
       const total = (transaksi1 + transaksi2 + transaksi3 + transaksi4 + transaksi5 + transaksi6 + transaksi7 + transaksi8 + transaksi9 + transaksi10) / (totalLot || 1);
       
-      const konversiInteger = Math.floor(total);
-      const konversiRupiah = konversiInteger.toLocaleString('id-ID');
+      // const konversiInteger = Math.floor(total);
+      // const konversiRupiah = konversiInteger.toLocaleString('id-ID');
+      const konversi = total.toFixed(2);
 
-      this.average = konversiRupiah;
-      this.totalLot = totalLot;
-      this.totalShares = totalLot * 100;
+      // this.average = konversiRupiah;
+      this.average = konversi;
+      this.totalLot = totalLot / 100;
+      this.totalShares = totalLot;
     },
     reset() {
       this.$q.dialog({
@@ -270,6 +301,11 @@ export default {
         message: 'Are you sure ?',
         cancel: true,
         persistent: true,
+        cancel: {
+          label: 'Cancel',
+          flat: true,
+          color: 'red'
+        },
       }).onOk(() => {
         this.lot1='',
         this.lot2='',
@@ -303,6 +339,9 @@ export default {
         this.totalLot= 0,
         this.totalShares= 0
       });
+    },
+    info() {
+      this.information_dialog = true;
     }
   },
 }
