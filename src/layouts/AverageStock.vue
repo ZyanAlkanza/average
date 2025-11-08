@@ -298,14 +298,16 @@ export default {
     reset() {
       this.$q.dialog({
         title: 'Reset Form',
-        message: 'Are you sure ?',
-        cancel: true,
-        persistent: true,
+        message: 'Are you sure want to reset this form?',
+        ok: {
+          flat: true,
+          color: 'primary'
+        },
         cancel: {
-          label: 'Cancel',
           flat: true,
           color: 'red'
         },
+        persistent: true,
       }).onOk(() => {
         this.lot1='',
         this.lot2='',
