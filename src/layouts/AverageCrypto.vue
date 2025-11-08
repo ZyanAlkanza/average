@@ -265,8 +265,15 @@ export default {
     reset() {
       this.$q.dialog({
         title: 'Reset Form',
-        message: 'Are you sure ?',
-        cancel: true,
+        message: 'Are you sure want to reset this form?',
+        ok: {
+          flat: true,
+          color: 'primary'
+        },
+        cancel: {
+          flat: true,
+          color: 'red'
+        },
         persistent: true,
       }).onOk(() => {
         this.menu= false,
